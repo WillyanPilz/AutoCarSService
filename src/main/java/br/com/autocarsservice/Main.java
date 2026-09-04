@@ -1,6 +1,6 @@
 package br.com.autocarsservice;
 import br.com.autocarsservice.model.Cliente;
-
+import br.com.autocarsservice.service.ClienteService;
 
 public class Main {
     public static void main(String [] args){
@@ -12,11 +12,13 @@ public class Main {
         cliente1.setTelefone("4790000-0000");
         cliente1.setNome("Pessoa");
 
-        System.out.println("ID: " + cliente1.getId());
-        System.out.println("Email: " + cliente1.getEmail());
-        System.out.println("Telefone: " + cliente1.getTelefone());
-        System.out.println("Nome: " + cliente1.getNome());
 
+        ClienteService clienteService = new ClienteService();
+            clienteService.adicionarCliente(cliente1);
+
+            System.out.println("Numero de Clientes: " + clienteService.quantidadeClientes());
+
+            clienteService.listarClientes();
 
     }
 }
