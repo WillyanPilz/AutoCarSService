@@ -4,6 +4,8 @@ import br.com.autocarsservice.model.Veiculo;
 import br.com.autocarsservice.service.ClienteService;
 import br.com.autocarsservice.service.VeiculoService;
 
+import java.io.PrintStream;
+
 public class Main {
     public static void main(String [] args){
 
@@ -19,8 +21,7 @@ public class Main {
         veiculo1.setModelo("Fox 1.6");
         veiculo1.setMarca("Volkswagen");
         veiculo1.setPlaca("R432L22");
-
-
+        veiculo1.setCliente(cliente1);
 
         ClienteService clienteService = new ClienteService();
             clienteService.adicionarCliente(cliente1);
@@ -31,7 +32,8 @@ public class Main {
             System.out.println("Numero de Clientes: " + clienteService.quantidadeClientes());
 
             clienteService.listarClientes();
-            veiculoService.listar_veiculos();
+            veiculoService.listarVeiculos();
+
 
     }
 }

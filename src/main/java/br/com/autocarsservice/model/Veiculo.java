@@ -6,6 +6,7 @@ public class Veiculo {
     private String marca;
     private String modelo;
     private int ano;
+    private Cliente cliente;
 
     public String getPlaca(){
         return placa;
@@ -34,6 +35,9 @@ public class Veiculo {
     public void setAno(int ano){
         this.ano = ano;
     }
+
+    public Cliente getCliente(){return cliente;}
+    public void setCliente (Cliente cliente){ this.cliente = cliente; }
 
 }
 

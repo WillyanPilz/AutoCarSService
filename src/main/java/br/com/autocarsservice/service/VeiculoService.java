@@ -2,27 +2,27 @@ package br.com.autocarsservice.service;
 
 import br.com.autocarsservice.model.Veiculo;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class VeiculoService {
 
-    ArrayList<Veiculo>lista_de_veiculos = new ArrayList<>();
+    ArrayList<Veiculo>listaDeVeiculos = new ArrayList<>();
 
         public  void adicionarVeiculo(Veiculo veiculo){
-            lista_de_veiculos.add(veiculo);
+            listaDeVeiculos.add(veiculo);
         }
 
-        public int quantidade_de_veiculos(){
-            return lista_de_veiculos.size();
+        public int quantidadeDeVeiculos(){
+            return listaDeVeiculos.size();
         }
 
-        public void listar_veiculos(){
-            for(Veiculo veiculoAtual : lista_de_veiculos){
+        public void listarVeiculos(){
+            for(Veiculo veiculoAtual : listaDeVeiculos){
                 System.out.println("Placa: " + veiculoAtual.getPlaca());
                 System.out.println("Ano: " + veiculoAtual.getAno());
                 System.out.println("Marca: " + veiculoAtual.getMarca());
                 System.out.println("Modelo: " + veiculoAtual.getModelo());
+                System.out.println("Cliente: " + veiculoAtual.getCliente().getNome());
             }
         }
 }
